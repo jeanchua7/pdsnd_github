@@ -1,15 +1,14 @@
 ### Date created
-Include the date you created this project and README file.
+06 February 2020
 
 ### Project Title
-Replace the Project Title
+Bikeshare Analysis with R
 
 ### Description
-Describe what your project is about and what it does
+This project uses R to analyse bikesharing data to derive trends
 
 ### Files used
-Include the files used
+Explore_bikeshare_data.html / Explore_bikeshare_data.ipynb + data files
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+Google
