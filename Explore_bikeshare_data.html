@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>Explore_bikeshare_data</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Explore bikeshare data</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -8451,15 +8451,15 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatability layer.  It allows the usage of flexible box 
+/* This file is a compatability layer.  It allows the usage of flexible box
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
-`Modern browsers` comments below).  Browsers that are known to implement this 
+`Modern browsers` comments below).  Browsers that are known to implement this
 new spec completely include:
 
     Firefox 28.0+
     Chrome 29.0+
-    Internet Explorer 11+ 
+    Internet Explorer 11+
     Opera 17.0+
 
 Browsers not listed, including Safari, are supported via the styling under the
@@ -11233,7 +11233,7 @@ div#pager .ui-resizable-handle {
   background: #f7f7f7;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for 
+  /* This injects handle bars (a short, wide = symbol) for
         the resize handle. */
 }
 div#pager .ui-resizable-handle::after {
@@ -11676,7 +11676,7 @@ ul.typeahead-list > li > a {
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
-    
+
 /* Temporary definitions which will become obsolete with Notebook release 5.0 */
 .ansi-black-fg { color: #3E424D; }
 .ansi-black-bg { background-color: #3E424D; }
@@ -11715,7 +11715,7 @@ ul.typeahead-list > li > a {
 
     </style>
 <style type="text/css">
-    body[data-notebook-name] > #header #header-container:not(.show-panel), /* body has data-notebook-name attribute when 
+    body[data-notebook-name] > #header #header-container:not(.show-panel), /* body has data-notebook-name attribute when
 a notebook is open. this rule won't be applied when the notebook is not open (in 404 view for example) */
 body[data-notebook-name] #menubar-container #maintoolbar:not(.show-panel),
 body[data-notebook-name] #menubar-container ul.navbar-nav:not(.show-panel) {
@@ -11749,14 +11749,14 @@ div#notebook {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
@@ -11917,14 +11917,14 @@ The following object is masked from ‘package:base’:
 
 <span class="c1"># New York Data Wrangling</span>
 <span class="n">ny</span><span class="o">$</span><span class="n">S.Date</span> <span class="o">&lt;-</span> <span class="nf">as.Date</span><span class="p">(</span><span class="n">ny</span><span class="o">$</span><span class="n">Start.Time</span><span class="p">)</span>
-<span class="n">ny</span><span class="o">$</span><span class="n">S.Time</span> <span class="o">&lt;-</span> <span class="nf">format</span><span class="p">(</span><span class="nf">as.POSIXct</span><span class="p">(</span><span class="n">ny</span><span class="o">$</span><span class="n">Start.Time</span><span class="p">)</span> <span class="p">,</span><span class="n">format</span> <span class="o">=</span> <span class="s">&quot;%H:%M:%S&quot;</span><span class="p">)</span> 
+<span class="n">ny</span><span class="o">$</span><span class="n">S.Time</span> <span class="o">&lt;-</span> <span class="nf">format</span><span class="p">(</span><span class="nf">as.POSIXct</span><span class="p">(</span><span class="n">ny</span><span class="o">$</span><span class="n">Start.Time</span><span class="p">)</span> <span class="p">,</span><span class="n">format</span> <span class="o">=</span> <span class="s">&quot;%H:%M:%S&quot;</span><span class="p">)</span>
 <span class="n">ny</span><span class="o">$</span><span class="n">S.Month</span> <span class="o">&lt;-</span> <span class="nf">months</span><span class="p">(</span><span class="nf">as.Date</span><span class="p">(</span><span class="n">ny</span><span class="o">$</span><span class="n">S.Date</span><span class="p">))</span>
 <span class="n">ny</span><span class="o">$</span><span class="n">S.Hour</span> <span class="o">&lt;-</span> <span class="nf">format</span><span class="p">(</span><span class="nf">strptime</span><span class="p">(</span><span class="n">ny</span><span class="o">$</span><span class="n">S.Time</span><span class="p">,</span> <span class="s">&quot;%H:%M:%S&quot;</span><span class="p">),</span> <span class="s">&quot;%H&quot;</span><span class="p">)</span>
 
 
 <span class="c1"># Chicago Data Wrangling</span>
 <span class="n">chi</span><span class="o">$</span><span class="n">S.Date</span> <span class="o">&lt;-</span> <span class="nf">as.Date</span><span class="p">(</span><span class="n">chi</span><span class="o">$</span><span class="n">Start.Time</span><span class="p">)</span>
-<span class="n">chi</span><span class="o">$</span><span class="n">S.Time</span> <span class="o">&lt;-</span> <span class="nf">format</span><span class="p">(</span><span class="nf">as.POSIXct</span><span class="p">(</span><span class="n">chi</span><span class="o">$</span><span class="n">Start.Time</span><span class="p">)</span> <span class="p">,</span><span class="n">format</span> <span class="o">=</span> <span class="s">&quot;%H:%M:%S&quot;</span><span class="p">)</span> 
+<span class="n">chi</span><span class="o">$</span><span class="n">S.Time</span> <span class="o">&lt;-</span> <span class="nf">format</span><span class="p">(</span><span class="nf">as.POSIXct</span><span class="p">(</span><span class="n">chi</span><span class="o">$</span><span class="n">Start.Time</span><span class="p">)</span> <span class="p">,</span><span class="n">format</span> <span class="o">=</span> <span class="s">&quot;%H:%M:%S&quot;</span><span class="p">)</span>
 <span class="n">chi</span><span class="o">$</span><span class="n">S.Month</span> <span class="o">&lt;-</span> <span class="nf">months</span><span class="p">(</span><span class="nf">as.Date</span><span class="p">(</span><span class="n">chi</span><span class="o">$</span><span class="n">S.Date</span><span class="p">))</span>
 <span class="n">chi</span><span class="o">$</span><span class="n">S.Hour</span> <span class="o">&lt;-</span> <span class="nf">format</span><span class="p">(</span><span class="nf">strptime</span><span class="p">(</span><span class="n">chi</span><span class="o">$</span><span class="n">S.Time</span><span class="p">,</span> <span class="s">&quot;%H:%M:%S&quot;</span><span class="p">),</span> <span class="s">&quot;%H&quot;</span><span class="p">)</span>
 
@@ -12027,26 +12027,26 @@ The following object is masked from ‘package:base’:
 <span class="c1"># qplot(month(S.Date), data=ny, fill=as.factor(year(S.Date)), geom=&quot;bar&quot;, xlab=&quot;Months&quot;, ylab=&quot;Number of rental&quot;) + labs(fill=&quot;Year of rental&quot;)</span>
 
 <span class="c1"># prepare temporary data frame (ny1) to display ordered months in x axis</span>
-<span class="n">ny1</span> <span class="o">&lt;-</span> <span class="n">ny</span> <span class="o">%&gt;%</span> <span class="nf">mutate</span><span class="p">(</span><span class="n">S.Month</span> <span class="o">=</span> <span class="nf">factor</span><span class="p">(</span><span class="n">S.Month</span><span class="p">,</span> 
-                    <span class="n">levels</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;January&quot;</span><span class="p">,</span> <span class="s">&quot;February&quot;</span><span class="p">,</span> <span class="s">&quot;March&quot;</span><span class="p">,</span> <span class="s">&quot;April&quot;</span><span class="p">,</span> 
-                               <span class="s">&quot;May&quot;</span><span class="p">,</span> <span class="s">&quot;June&quot;</span><span class="p">,</span> <span class="s">&quot;July&quot;</span><span class="p">,</span> <span class="s">&quot;August&quot;</span><span class="p">,</span> 
+<span class="n">ny1</span> <span class="o">&lt;-</span> <span class="n">ny</span> <span class="o">%&gt;%</span> <span class="nf">mutate</span><span class="p">(</span><span class="n">S.Month</span> <span class="o">=</span> <span class="nf">factor</span><span class="p">(</span><span class="n">S.Month</span><span class="p">,</span>
+                    <span class="n">levels</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;January&quot;</span><span class="p">,</span> <span class="s">&quot;February&quot;</span><span class="p">,</span> <span class="s">&quot;March&quot;</span><span class="p">,</span> <span class="s">&quot;April&quot;</span><span class="p">,</span>
+                               <span class="s">&quot;May&quot;</span><span class="p">,</span> <span class="s">&quot;June&quot;</span><span class="p">,</span> <span class="s">&quot;July&quot;</span><span class="p">,</span> <span class="s">&quot;August&quot;</span><span class="p">,</span>
                                <span class="s">&quot;September&quot;</span><span class="p">,</span> <span class="s">&quot;October&quot;</span><span class="p">,</span> <span class="s">&quot;November&quot;</span><span class="p">,</span> <span class="s">&quot;December&quot;</span><span class="p">),</span>
                     <span class="n">ordered</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">))</span>
 
-<span class="n">chi1</span> <span class="o">&lt;-</span> <span class="n">chi</span> <span class="o">%&gt;%</span> <span class="nf">mutate</span><span class="p">(</span><span class="n">S.Month</span> <span class="o">=</span> <span class="nf">factor</span><span class="p">(</span><span class="n">S.Month</span><span class="p">,</span> 
-                    <span class="n">levels</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;January&quot;</span><span class="p">,</span> <span class="s">&quot;February&quot;</span><span class="p">,</span> <span class="s">&quot;March&quot;</span><span class="p">,</span> <span class="s">&quot;April&quot;</span><span class="p">,</span> 
-                               <span class="s">&quot;May&quot;</span><span class="p">,</span> <span class="s">&quot;June&quot;</span><span class="p">,</span> <span class="s">&quot;July&quot;</span><span class="p">,</span> <span class="s">&quot;August&quot;</span><span class="p">,</span> 
+<span class="n">chi1</span> <span class="o">&lt;-</span> <span class="n">chi</span> <span class="o">%&gt;%</span> <span class="nf">mutate</span><span class="p">(</span><span class="n">S.Month</span> <span class="o">=</span> <span class="nf">factor</span><span class="p">(</span><span class="n">S.Month</span><span class="p">,</span>
+                    <span class="n">levels</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;January&quot;</span><span class="p">,</span> <span class="s">&quot;February&quot;</span><span class="p">,</span> <span class="s">&quot;March&quot;</span><span class="p">,</span> <span class="s">&quot;April&quot;</span><span class="p">,</span>
+                               <span class="s">&quot;May&quot;</span><span class="p">,</span> <span class="s">&quot;June&quot;</span><span class="p">,</span> <span class="s">&quot;July&quot;</span><span class="p">,</span> <span class="s">&quot;August&quot;</span><span class="p">,</span>
                                <span class="s">&quot;September&quot;</span><span class="p">,</span> <span class="s">&quot;October&quot;</span><span class="p">,</span> <span class="s">&quot;November&quot;</span><span class="p">,</span> <span class="s">&quot;December&quot;</span><span class="p">),</span>
                     <span class="n">ordered</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">))</span>
 
-<span class="n">ny_rental_months_plot</span> <span class="o">&lt;-</span> <span class="nf">qplot</span><span class="p">(</span><span class="n">S.Month</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">ny1</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="nf">as.factor</span><span class="p">(</span><span class="nf">year</span><span class="p">(</span><span class="n">S.Date</span><span class="p">)),</span> 
-                               <span class="n">geom</span><span class="o">=</span><span class="s">&quot;bar&quot;</span><span class="p">,</span> <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;Month&quot;</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s">&quot;Number of rentals&quot;</span><span class="p">,</span> 
-                               <span class="n">main</span><span class="o">=</span><span class="s">&quot;New York - Bike Rentals by Months&quot;</span><span class="p">,</span> <span class="n">colour</span><span class="o">=</span><span class="nf">I</span><span class="p">(</span><span class="s">&quot;red&quot;</span><span class="p">))</span> <span class="o">+</span> 
+<span class="n">ny_rental_months_plot</span> <span class="o">&lt;-</span> <span class="nf">qplot</span><span class="p">(</span><span class="n">S.Month</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">ny1</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="nf">as.factor</span><span class="p">(</span><span class="nf">year</span><span class="p">(</span><span class="n">S.Date</span><span class="p">)),</span>
+                               <span class="n">geom</span><span class="o">=</span><span class="s">&quot;bar&quot;</span><span class="p">,</span> <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;Month&quot;</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s">&quot;Number of rentals&quot;</span><span class="p">,</span>
+                               <span class="n">main</span><span class="o">=</span><span class="s">&quot;New York - Bike Rentals by Months&quot;</span><span class="p">,</span> <span class="n">colour</span><span class="o">=</span><span class="nf">I</span><span class="p">(</span><span class="s">&quot;red&quot;</span><span class="p">))</span> <span class="o">+</span>
                                <span class="nf">labs</span><span class="p">(</span><span class="n">fill</span><span class="o">=</span><span class="s">&quot;Year of rental&quot;</span><span class="p">)</span>
 
-<span class="n">chi_rental_months_plot</span> <span class="o">&lt;-</span> <span class="nf">qplot</span><span class="p">(</span><span class="n">S.Month</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">chi1</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="nf">as.factor</span><span class="p">(</span><span class="nf">year</span><span class="p">(</span><span class="n">S.Date</span><span class="p">)),</span> 
-                               <span class="n">geom</span><span class="o">=</span><span class="s">&quot;bar&quot;</span><span class="p">,</span> <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;Month&quot;</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s">&quot;Number of rentals&quot;</span><span class="p">,</span> 
-                               <span class="n">main</span><span class="o">=</span><span class="s">&quot;Chicago - Bike Rentals by Months&quot;</span><span class="p">,</span> <span class="n">colour</span><span class="o">=</span><span class="nf">I</span><span class="p">(</span><span class="s">&quot;blue&quot;</span><span class="p">))</span> <span class="o">+</span> 
+<span class="n">chi_rental_months_plot</span> <span class="o">&lt;-</span> <span class="nf">qplot</span><span class="p">(</span><span class="n">S.Month</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">chi1</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="nf">as.factor</span><span class="p">(</span><span class="nf">year</span><span class="p">(</span><span class="n">S.Date</span><span class="p">)),</span>
+                               <span class="n">geom</span><span class="o">=</span><span class="s">&quot;bar&quot;</span><span class="p">,</span> <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;Month&quot;</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s">&quot;Number of rentals&quot;</span><span class="p">,</span>
+                               <span class="n">main</span><span class="o">=</span><span class="s">&quot;Chicago - Bike Rentals by Months&quot;</span><span class="p">,</span> <span class="n">colour</span><span class="o">=</span><span class="nf">I</span><span class="p">(</span><span class="s">&quot;blue&quot;</span><span class="p">))</span> <span class="o">+</span>
                                <span class="nf">labs</span><span class="p">(</span><span class="n">fill</span><span class="o">=</span><span class="s">&quot;Year of rental&quot;</span><span class="p">)</span>
 </pre></div>
 
@@ -12120,11 +12120,11 @@ The following object is masked from ‘package:base’:
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">#Plotting the trip duration across months and focusing on the main bulk of our users by limiting the axis </span>
-<span class="nf">ggplot</span><span class="p">(</span><span class="n">ny1</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">S.Month</span><span class="p">,</span> <span class="n">Trip.Duration</span><span class="o">/</span><span class="m">60</span><span class="p">))</span> <span class="o">+</span> 
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">ny1</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">S.Month</span><span class="p">,</span> <span class="n">Trip.Duration</span><span class="o">/</span><span class="m">60</span><span class="p">))</span> <span class="o">+</span>
   <span class="nf">geom_boxplot </span><span class="p">()</span> <span class="o">+</span>
   <span class="nf">ylim</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">20</span><span class="p">))</span> <span class="o">+</span>
-  <span class="nf">xlab</span><span class="p">(</span><span class="s">&#39;Month&#39;</span><span class="p">)</span> <span class="o">+</span> 
-  <span class="nf">ylab</span><span class="p">(</span><span class="s">&#39;Trip Duration (Minutes)&#39;</span><span class="p">)</span> <span class="o">+</span>   
+  <span class="nf">xlab</span><span class="p">(</span><span class="s">&#39;Month&#39;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">ylab</span><span class="p">(</span><span class="s">&#39;Trip Duration (Minutes)&#39;</span><span class="p">)</span> <span class="o">+</span>
   <span class="nf">stat_summary</span><span class="p">(</span><span class="n">fun.y</span> <span class="o">=</span> <span class="s">&quot;mean&quot;</span><span class="p">,</span> <span class="n">geom</span> <span class="o">=</span> <span class="s">&quot;point&quot;</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="m">5</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s">&quot;orange&quot;</span><span class="p">,</span> <span class="n">shape</span> <span class="o">=</span> <span class="m">10</span><span class="p">)</span>
 </pre></div>
 
@@ -12207,15 +12207,15 @@ The following object is masked from ‘package:base’:
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">ny_gender_plot</span> <span class="o">&lt;-</span>
     <span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">ny_gender_df</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">User.Type</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">Gender.Count</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">Gender</span><span class="p">))</span> <span class="o">+</span>
-        <span class="nf">geom_bar</span><span class="p">(</span><span class="n">stat</span><span class="o">=</span><span class="s">&quot;identity&quot;</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="nf">position_dodge</span><span class="p">())</span> <span class="o">+</span> 
-        <span class="nf">xlab</span><span class="p">(</span><span class="s">&#39;Customer/Subscriber&#39;</span><span class="p">)</span> <span class="o">+</span> 
+        <span class="nf">geom_bar</span><span class="p">(</span><span class="n">stat</span><span class="o">=</span><span class="s">&quot;identity&quot;</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="nf">position_dodge</span><span class="p">())</span> <span class="o">+</span>
+        <span class="nf">xlab</span><span class="p">(</span><span class="s">&#39;Customer/Subscriber&#39;</span><span class="p">)</span> <span class="o">+</span>
         <span class="nf">ylab</span><span class="p">(</span><span class="s">&#39;Number of rentals&#39;</span><span class="p">)</span> <span class="o">+</span>
         <span class="nf">ggtitle</span><span class="p">(</span><span class="s">&#39;New York - Bike Rentals, Customer/Subscriber&#39;</span><span class="p">)</span>
 
 <span class="n">chi_gender_plot</span> <span class="o">&lt;-</span>
     <span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">chi_gender_df</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">User.Type</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">Gender.Count</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">Gender</span><span class="p">))</span> <span class="o">+</span>
-        <span class="nf">geom_bar</span><span class="p">(</span><span class="n">stat</span><span class="o">=</span><span class="s">&quot;identity&quot;</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="nf">position_dodge</span><span class="p">())</span> <span class="o">+</span> 
-        <span class="nf">xlab</span><span class="p">(</span><span class="s">&#39;Customer/Subscriber&#39;</span><span class="p">)</span> <span class="o">+</span> 
+        <span class="nf">geom_bar</span><span class="p">(</span><span class="n">stat</span><span class="o">=</span><span class="s">&quot;identity&quot;</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="nf">position_dodge</span><span class="p">())</span> <span class="o">+</span>
+        <span class="nf">xlab</span><span class="p">(</span><span class="s">&#39;Customer/Subscriber&#39;</span><span class="p">)</span> <span class="o">+</span>
         <span class="nf">ylab</span><span class="p">(</span><span class="s">&#39;Number of rentals&#39;</span><span class="p">)</span> <span class="o">+</span>
         <span class="nf">ggtitle</span><span class="p">(</span><span class="s">&#39;Chicago - Bike Rentals, Customer/Subscriber&#39;</span><span class="p">)</span>
 </pre></div>
@@ -12296,15 +12296,15 @@ The following object is masked from ‘package:base’:
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">ny_gender_plot</span> <span class="o">&lt;-</span>
     <span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">ny_gender_df</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">S.Month</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">Gender.Count</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">Gender</span><span class="p">))</span> <span class="o">+</span>
-        <span class="nf">geom_bar</span><span class="p">(</span><span class="n">stat</span><span class="o">=</span><span class="s">&quot;identity&quot;</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="nf">position_dodge</span><span class="p">())</span> <span class="o">+</span> 
-        <span class="nf">xlab</span><span class="p">(</span><span class="s">&#39;Month&#39;</span><span class="p">)</span> <span class="o">+</span> 
+        <span class="nf">geom_bar</span><span class="p">(</span><span class="n">stat</span><span class="o">=</span><span class="s">&quot;identity&quot;</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="nf">position_dodge</span><span class="p">())</span> <span class="o">+</span>
+        <span class="nf">xlab</span><span class="p">(</span><span class="s">&#39;Month&#39;</span><span class="p">)</span> <span class="o">+</span>
         <span class="nf">ylab</span><span class="p">(</span><span class="s">&#39;Number of rentals&#39;</span><span class="p">)</span> <span class="o">+</span>
         <span class="nf">ggtitle</span><span class="p">(</span><span class="s">&#39;New York - Bike Rentals, Month&#39;</span><span class="p">)</span>
 
 <span class="n">chi_gender_plot</span> <span class="o">&lt;-</span>
     <span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">chi_gender_df</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">S.Month</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">Gender.Count</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">Gender</span><span class="p">))</span> <span class="o">+</span>
-        <span class="nf">geom_bar</span><span class="p">(</span><span class="n">stat</span><span class="o">=</span><span class="s">&quot;identity&quot;</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="nf">position_dodge</span><span class="p">())</span> <span class="o">+</span> 
-        <span class="nf">xlab</span><span class="p">(</span><span class="s">&#39;Month&#39;</span><span class="p">)</span> <span class="o">+</span> 
+        <span class="nf">geom_bar</span><span class="p">(</span><span class="n">stat</span><span class="o">=</span><span class="s">&quot;identity&quot;</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="nf">position_dodge</span><span class="p">())</span> <span class="o">+</span>
+        <span class="nf">xlab</span><span class="p">(</span><span class="s">&#39;Month&#39;</span><span class="p">)</span> <span class="o">+</span>
         <span class="nf">ylab</span><span class="p">(</span><span class="s">&#39;Number of rentals&#39;</span><span class="p">)</span> <span class="o">+</span>
         <span class="nf">ggtitle</span><span class="p">(</span><span class="s">&#39;Chicago - Bike Rentals, Month&#39;</span><span class="p">)</span>
 </pre></div>
@@ -12398,7 +12398,7 @@ The following object is masked from ‘package:base’:
       <span class="nf">xlab</span><span class="p">(</span><span class="s">&#39;Time of the Day (Hour)&#39;</span><span class="p">)</span> <span class="o">+</span>
       <span class="nf">ylab</span><span class="p">(</span><span class="s">&#39;Trip Duration (Minutes)&#39;</span><span class="p">)</span> <span class="o">+</span>
       <span class="nf">ggtitle</span><span class="p">(</span><span class="s">&#39;Chicago - Trends in Rental Duration Across the Day&#39;</span><span class="p">)</span> <span class="o">+</span>
-      <span class="nf">stat_summary</span><span class="p">(</span><span class="n">geom</span> <span class="o">=</span> <span class="s">&quot;line&quot;</span><span class="p">,</span> <span class="n">fun.y</span> <span class="o">=</span> <span class="s">&quot;mean&quot;</span><span class="p">)</span> 
+      <span class="nf">stat_summary</span><span class="p">(</span><span class="n">geom</span> <span class="o">=</span> <span class="s">&quot;line&quot;</span><span class="p">,</span> <span class="n">fun.y</span> <span class="o">=</span> <span class="s">&quot;mean&quot;</span><span class="p">)</span>
       <span class="nf">stat_summary</span><span class="p">(</span><span class="n">geom</span> <span class="o">=</span> <span class="s">&quot;line&quot;</span><span class="p">,</span> <span class="n">fun.y</span> <span class="o">=</span> <span class="s">&quot;median&quot;</span><span class="p">)</span>
 </pre></div>
 
@@ -12469,7 +12469,7 @@ The following object is masked from ‘package:base’:
   </div>
 </body>
 
- 
+
 
 
 </html>
