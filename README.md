@@ -9,6 +9,3 @@ This project uses R to analyse bikesharing data to derive trends
 
 ### Files used
 Explore_bikeshare_data.html / Explore_bikeshare_data.ipynb + data files
-
-### Credits
-Google
